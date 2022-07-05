@@ -5,11 +5,15 @@ import styles from '../styles/Home.module.css'
 import { useEffect, useState } from 'react'
 
 const Home: NextPage = () => {
-    const [delphai, setDelphai] = useState<DelphaiInterface>()
+    const [delphai, setDelphai] = useState<DelphaiInterface>();
+    let hasCalled = false;
 
     useEffect(() => {
-        setDelphai(new DelphaiInterface());
-    }, []);
+        if (!hasCalled) {
+            hasCalled = true;
+            setDelphai(new DelphaiInterface());
+        }
+    }, [hasCalled]);
 
     return (
         <div className={styles.container}>
