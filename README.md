@@ -19,3 +19,7 @@ Frame Send Error {type: 'FCL:VIEW:READY:RESPONSE', fclVersion: '1.1.0', body: {â
     at onReady (fcl.module.js?6838:1117:1)
     at eval (fcl.module.js?6838:988:1)
 ```
+
+## Resolution
+
+This has been resolved by upgrading the Flow CLI to v0.37.2

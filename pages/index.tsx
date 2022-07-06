@@ -6,14 +6,10 @@ import { useEffect, useState } from 'react'
 
 const Home: NextPage = () => {
     const [delphai, setDelphai] = useState<DelphaiInterface>();
-    let hasCalled = false;
 
     useEffect(() => {
-        if (!hasCalled) {
-            hasCalled = true;
-            setDelphai(new DelphaiInterface());
-        }
-    }, [hasCalled]);
+        setDelphai(new DelphaiInterface());
+    }, []);
 
     return (
         <div className={styles.container}>
